@@ -1,0 +1,304 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>node_status &mdash; node_status 0.1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="node_status 0.1.0 documentation" href="index.html"/>
+        <link rel="next" title="License" href="license.html"/>
+        <link rel="prev" title="Getting Started" href="getting_started.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> node_status
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">node_status</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-usage">Example Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#return-status-information-for-all-nodes">Return status information for all nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#return-status-information-for-all-nodes-with-web-in-their-name">Return status information for all nodes with <strong>web</strong> in their name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#return-status-information-for-all-healthy-nodes">Return status information for all <strong>healthy</strong> nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#return-status-information-for-all-healthy-nodes-with-db-in-their-name">Return status information for all <strong>healthy</strong> nodes with <strong>db</strong> in their name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#display-chef-client-and-ruby-version-numbers-for-healthy-nodes">Display chef-client and ruby version numbers for <strong>healthy</strong> nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#command-line-reference">Command-line Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">node_status</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>node_status</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/node_status.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="node-status">
+<h1>node_status<a class="headerlink" href="#node-status" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p><strong>node_status</strong>, is an alternative to knife&#8217;s <em>status</em> subcommand.  It provides various
+output formats, sorting, filtering, and it is very fast, using partial search.</p>
+</div>
+<div class="section" id="example-usage">
+<h2>Example Usage<a class="headerlink" href="#example-usage" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="return-status-information-for-all-nodes">
+<h3>Return status information for all nodes<a class="headerlink" href="#return-status-information-for-all-nodes" title="Permalink to this headline">¶</a></h3>
+<p>Output format is similar to <em>knife status</em>.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>node_status
+</pre></div>
+</div>
+</div>
+<div class="section" id="return-status-information-for-all-nodes-with-web-in-their-name">
+<h3>Return status information for all nodes with <strong>web</strong> in their name<a class="headerlink" href="#return-status-information-for-all-nodes-with-web-in-their-name" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>node_status -F <span class="s1">&#39;*web*&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="return-status-information-for-all-healthy-nodes">
+<h3>Return status information for all <strong>healthy</strong> nodes<a class="headerlink" href="#return-status-information-for-all-healthy-nodes" title="Permalink to this headline">¶</a></h3>
+<p>Healthy will be considered any node that has had a successful chef-client
+run in the past 180 minutes.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>node_status -H -m 180
+</pre></div>
+</div>
+</div>
+<div class="section" id="return-status-information-for-all-healthy-nodes-with-db-in-their-name">
+<h3>Return status information for all <strong>healthy</strong> nodes with <strong>db</strong> in their name<a class="headerlink" href="#return-status-information-for-all-healthy-nodes-with-db-in-their-name" title="Permalink to this headline">¶</a></h3>
+<p>Return a list of FQDNs matching our criteria, perhaps for use by fabric.  Sort by
+FQDN in ascending order.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>node_status -H -m <span class="m">180</span> -f fqdn_list -S fqdn
+</pre></div>
+</div>
+</div>
+<div class="section" id="display-chef-client-and-ruby-version-numbers-for-healthy-nodes">
+<h3>Display chef-client and ruby version numbers for <strong>healthy</strong> nodes<a class="headerlink" href="#display-chef-client-and-ruby-version-numbers-for-healthy-nodes" title="Permalink to this headline">¶</a></h3>
+<p>Sort by ruby version.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>node_status -H -m <span class="m">180</span> -f fqdn_list -S ruby_version
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="command-line-reference">
+<h2>Command-line Reference<a class="headerlink" href="#command-line-reference" title="Permalink to this headline">¶</a></h2>
+<p>A &#8216;knife status&#8217; alternative.</p>
+<div class="highlight-python"><div class="highlight"><pre>usage: node_status [-h] [--name-filter CHEF_SEARCH_FILTER] [--healthy-only]
+                   [--healthy-minutes HEALTHY_MINUTES]
+                   [--output-format {knife_status,fqdn_list,version_list}]
+                   [--sort {asc,desc,fqdn,chef_client_version,ruby_version}]
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>Options:</dt>
+<dd><table class="first last docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--name-filter</span>, <span class="option">-F</span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>A node name search filter, with * and ? allowed, defaulting to *.  For example, *dev* or *pr?d*.  Can be used multiple times with results being cumulative</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--healthy-only=False</span>, <span class="option">-H=False</span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Only report on &#8220;healthy&#8221; nodes, with client runs completed in &lt; &#8220;healthy minutes&#8221;</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--healthy-minutes=120</span>, <span class="option">-m=120</span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Set the number of minutes back for the last successful chef run, for a node to be considered healthy. Defaults to 120 minutes</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--output-format=knife_status</span>, <span class="option">-f=knife_status</span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td><p class="first">Output format to display.  Defaults to knife_status</p>
+<p class="last">Possible choices: knife_status, fqdn_list, version_list</p>
+</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--sort=desc</span>, <span class="option">-S=desc</span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td><p class="first">Last client run sort order.  Defaults to desc</p>
+<p class="last">Possible choices: asc, desc, fqdn, chef_client_version, ruby_version</p>
+</td></tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="license.html" class="btn btn-neutral float-right" title="License" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="getting_started.html" class="btn btn-neutral" title="Getting Started" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, zulily.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
